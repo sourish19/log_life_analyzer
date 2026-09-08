@@ -1,41 +1,38 @@
-from utils import validate_date_time
-
-
-def parse_log_lines(log:str):
-  """Return tuple of log (day,time,level,message)"""
-  splited_log = log.split(" ")
-  date_time = splited_log[0] + " " + splited_log[1]
-  is_valid_date_time = validate_date_time(date_time)
-
-  if is_valid_date_time is False:
-    print("Invalid log")
-    return
-
-  level = splited_log[2]
-
-  return (splited_log[0],splited_log[1])
-
+from utils import parse_log_lines
 
 
 def parse_log_file(filepath:str):
     """Return list of parsed log entries (tuples)"""
-    entries:list[str] = []
+    entries:list[tuple[str,str,str,str]] = []
+
     with open(filepath,"r") as file:
       for line in file:
-        # entries.append(line.strip())
-        parse_log_lines(line.strip())
+        data = parse_log_lines(line.strip())
+        if data is None:
+          continue
+        entries.append(data)
 
-    # return tuple(entries)
+    return entries
 
-    # [(date,time,lvl,mssg),]
-
-def get_unique_log_levels(logs):
+def get_unique_log_levels(logs:list[tuple[str, str, str, str]]):
     """Return set of all log levels found"""
-    pass
+    log_levels_set:set[str] = set()
 
-def filter_by_level(logs, level):
+    for log in logs:
+      log_levels_set.add(log[2])
+
+    return log_levels_set
+
+
+def filter_by_level(logs:list[tuple[str, str, str, str]], level:str):
     """Return list of logs with specific level"""
-    pass
+    level = level.upper()
+    specific_level_logs:list[tuple[str, str, str, str]] = []
+    for log in logs:
+      if level in log:
+        specific_level_logs.append(log)
+
+    return specific_level_logs
 
 def extract_errors(logs):
     """Return list of error tuples"""
@@ -51,4 +48,6 @@ def get_logs_after_time(logs, timestamp):
 
 
 # print(parse_log_file("./sample.log"))
-parse_log_file("./sample.log")
+parsed_logs = parse_log_file("./sample.log")
+print("GET UNIQUE LOG LEVELS: \n",get_unique_log_levels(parsed_logs),"\n")
+print("FILTER BY LEVLE: \n",filter_by_level(parsed_logs,"error"),"\n")

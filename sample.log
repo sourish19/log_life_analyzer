@@ -3,4 +3,5 @@
 2024-01-15 10:25:30 WARNING Memory usage at 85%
 2024-01-15 10:26:01 ERROR Database connection failed
 invalid log line without proper format
+2024-01-15 10:27:15 FFFF API response time: 234ms
 2024-01-15 10:27:15 INFO API response time: 234ms
