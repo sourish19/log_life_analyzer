@@ -1,7 +1,41 @@
-2024-01-15 10:23:45 ERROR Database connection failed
-2024-01-15 10:24:12 INFO User login successful
-2024-01-15 10:25:30 WARNING Memory usage at 85%
-2024-01-15 10:26:01 ERROR Database connection failed
+2024-01-15 09:15:22 INFO Server started successfully
+2024-01-15 09:20:10 INFO User login successful
+2024-01-15 09:21:45 WARNING Memory usage at 75%
+2024-01-15 09:25:30 ERROR Database connection failed
+2024-01-15 09:27:12 INFO User logout successful
+2024-01-15 09:30:05 ERROR File not found: config.json
+2024-01-15 09:32:18 WARNING CPU usage at 80%
+hello
+2024-01-15 09:35:42 INFO API response time: 234ms
 invalid log line without proper format
-2024-01-15 10:27:15 FFFF API response time: 234ms
-2024-01-15 10:27:15 INFO API response time: 234ms
+2024-01-15 09:40:15 ERROR Database connection failed
+2024-01-15 09:42:33 INFO User login successful
+2024-01-15 09:45:01 WARNING Disk usage at 85%
+2024-01-15 09:48:27 ERROR Authentication service unavailable
+2024-01-15 09:50:10 INFO Request processed successfully
+2024-01-15 09:52:45 ERROR Database connection failed
+2024-01-15 09:55:30 WARNING Memory usage at 90%
+this is another malformed line
+2024-01-15 10:00:00 INFO Scheduled backup started
+2024-01-15 10:03:21 ERROR Backup failed
+2024-01-15 10:05:44 INFO User login successful
+2024-01-15 10:08:19 WARNING CPU usage at 95%
+2024-01-15 10:10:30 ERROR Connection timeout
+2024-01-15 10:12:55 INFO API response time: 156ms
+2024-01-15 10:15:42 ERROR File not found: data.csv
+2024-01-15 10:18:03 INFO Scheduled backup completed
+2024-01-15 10:20:15 WARNING Disk usage at 92%
+2024-01-15 10:22:48 ERROR Database connection failed
+2024-01-15 10:25:30 INFO User logout successful
+2024-01-15 10:28:11 ERROR Invalid authentication token
+2024-01-15 10:30:00 INFO Server health check passed
+2024-01-15 10:32:17 WARNING Memory usage at 88%
+2024-01-15 10:35:49 ERROR Database connection failed
+2024-01-15 10:38:22 INFO Request processed successfully
+2024-01-15 10:40:05 ERROR Network connection lost
+2024-01-15 10:42:31 INFO Server health check passed
+2024-01-15 10:45:00 WARNING Disk usage at 95%
+2024-01-15 10:48:16 ERROR Database connection failed
+2024-01-15 10:50:42 INFO User login successful
+2024-01-15 10:53:27 ERROR Permission denied
+2024-01-15 10:55:10 INFO Server health check passed
